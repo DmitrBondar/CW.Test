@@ -1,0 +1,257 @@
+﻿<Page x:Class="CW.Test.View.Pages.PageTask.Task4Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CW.Test.View.Pages.PageTask"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Task4Page">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="2"
+               Source="/Images/main_bg.jpg"
+               Stretch="UniformToFill"/>
+        <Border Background="White"
+                Grid.Column="0"
+                BorderThickness="1"
+                BorderBrush="gray"
+                Width="150"
+                CornerRadius="15"
+                Height="470">
+            <StackPanel>
+                <Button Style="{DynamicResource menuButton}"
+                        Margin="0 10 0 0"
+                        x:Name="BtnTask1"
+                        Click="BtnTask1_Click" Height="80"
+                        Background="White"
+                        BorderBrush="Gray"
+                        Foreground="Black">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="TaskAdd"
+                                                 Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Задание №1"
+                                   Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnTask2"
+                        Click="BtnTask2_Click" Height="80"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Gray">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Taskadd"
+                                                 Style="{DynamicResource menubuttonIcon}"/>
+                        <TextBlock Text="Задание №2"
+                                   Style="{DynamicResource menuButtonText}"
+                                   Foreground="Black"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnTask3"
+                        Click="BtnTask3_Click" Height="80"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Gray">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Taskadd"
+                                                 Style="{DynamicResource menubuttonIcon}"/>
+                        <TextBlock Text="Задание №3"
+                                   Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnTask4"
+                        Click="BtnTask4_Click" Height="80"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Gray">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Taskadd"
+                                                 Style="{DynamicResource menubuttonIcon}"/>
+                        <TextBlock Text="Задание №4"
+                                   Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnTask5"
+                        Click="BtnTask5_Click" Height="80"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Gray">
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Taskadd"
+                                                 Style="{DynamicResource menubuttonIcon}" RenderTransformOrigin="2.436,0.72"/>
+                        <TextBlock Text="Задание №5"
+                                   Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{DynamicResource menuButton}"
+                        x:Name="BtnLogout"
+                        Click="BtnLogout_Click" Height="50" RenderTransformOrigin="0.5,0.449"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Gray">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <StackPanel>
+                        <materialDesign:PackIcon Kind="Power"
+                                  Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Выйти"
+                           Style="{DynamicResource menuButtonText}"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+        </Border>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Width="600"
+                    Height="95"
+                    Background="White"
+                    CornerRadius="15"
+                    Padding="15"
+                    Effect="{StaticResource MaterialDesignElevationShadow1}" Margin="0,25,0,0">
+                <StackPanel HorizontalAlignment="Left"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Задание №4 - Дано число n. Создайте массив int A[n][n], и заполните его по следующему правилу: числа на диагонали, идущей из правого верхнего в левый нижний угол равны 1; числа, стоящие выше этой диагонали, равны 0; числа, стоящие ниже этой диагонали, равны 2."
+                               FontSize="12"
+                               TextWrapping="Wrap"
+                               Foreground="Black"
+                               FontWeight="SemiBold" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.052"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="400"
+                    Height="380"
+                    Background="White"
+                    CornerRadius="15"
+                    Padding="15"
+                    Margin="0 0 0 0"
+                    Effect="{StaticResource MaterialDesignElevationShadow1}">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Text="Введите число n:"/>
+                        <TextBox x:Name="TbN"
+                                 BorderBrush="gray"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 10 0 0">
+                        <TextBlock Text="Массив:" 
+                                   FontSize="12"
+                                   Foreground="Black"
+                                   FontWeight="SemiBold"/>
+                        <TextBlock x:Name="matrixElement"
+                                   Foreground="Black"
+                                   FontSize="12"
+                                   Margin="0 3 3 0"/>
+                    </StackPanel>
+
+                    <Button Background="Black"
+                            Foreground="white"
+                            x:Name="BtnResElement"
+                            Click="BtnResElement_Click"
+                            Margin="0 10 0 0"
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IndicatorForeground="white"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                            Height="30">
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Check"
+                                                     Margin="0 1 3 0"
+                                                     Width="20"
+                                                     Height="20" />
+                            <TextBlock Text="Построить массив"
+                                       FontSize="12"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    
+                    <Button Background="Black"
+                            Visibility="Hidden"
+                            Foreground="white"
+                            x:Name="BtnClear"
+                            Click="BtnClear_Click"
+                            Margin="0 10 0 0"
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IndicatorForeground="white"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                            Height="30">
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Clear"
+                                                     Margin="0 1 3 0"
+                                                     Width="20"
+                                                     Height="20" />
+                            <TextBlock Text="Очистить"
+                                       FontSize="13"
+                                       VerticalAlignment="Center">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Page>
